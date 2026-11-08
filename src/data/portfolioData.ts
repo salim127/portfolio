@@ -64,6 +64,27 @@ export const PERSONAL_INFO = {
 
 export const PROJECTS: Project[] = [
   {
+    id: "educonnect-django",
+    title: "EduConnect — Django",
+    tagline: "Plateforme éducative collaborative et suivi pédagogique assisté par IA",
+    description: "Application web Django réunissant administrateurs, enseignants et apprenants autour des cours, exercices et objectifs d'apprentissage. Elle permet de soumettre et valider les travaux, de suivre la progression et d'analyser les besoins pédagogiques avec Gemini.",
+    category: "Full-Stack",
+    featured: true,
+    demoUrl: "https://educonnect-django-6m9fqt2jp-salims-projects-c221816c.vercel.app/",
+    githubUrl: "https://github.com/salim127/EduConnect-Django",
+    technologies: ["Django", "Python", "Bootstrap 5", "SQLite", "Gemini API"],
+    features: [
+      "Gestion des utilisateurs et permissions par rôle : administrateur, enseignant et apprenant",
+      "Création et gestion des cours et exercices",
+      "Attribution des objectifs et tâches d'apprentissage aux apprenants",
+      "Rédaction, soumission et validation des travaux par les enseignants",
+      "Suivi de progression, statistiques d'activité et estimation de la charge de travail",
+      "Analyse pédagogique et recherche par sens avec Gemini, sur demande"
+    ],
+    architecture: "Architecture Django MVT avec templates Bootstrap 5, base SQLite et permissions par rôle. Intégration de l'API Gemini pour l'analyse pédagogique et la recherche par sens.",
+    metrics: "Démo disponible sur Vercel"
+  },
+  {
     id: "bmp-tn",
     title: "BMP.tn",
     tagline: "Plateforme digitale intelligente pour le secteur de la construction",

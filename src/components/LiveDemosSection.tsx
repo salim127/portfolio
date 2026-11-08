@@ -1,7 +1,9 @@
 import React from 'react';
+import { PROJECTS } from '../data/portfolioData';
 import { ExternalLink, Sparkles, Mic, Bot, ShoppingCart, BookOpen, MessageSquare, Zap, Globe } from 'lucide-react';
 
 export const LiveDemosSection: React.FC = () => {
+  const eduConnect = PROJECTS.find((project) => project.id === 'educonnect-django')!;
   return (
     <section id="demos" className="py-20 relative bg-slate-950/60 border-y border-slate-800/80">
       
@@ -23,12 +25,35 @@ export const LiveDemosSection: React.FC = () => {
           </h2>
           
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Testez directement en ligne deux de mes projets majeurs intégrant des fonctionnalités avancées d'Intelligence Artificielle et d'APIs temps réel.
+            Découvrez mes applications en ligne : plateformes éducatives, intelligence artificielle et services interactifs.
           </p>
         </div>
 
         {/* Featured Live Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+          <div className="glass-card rounded-3xl p-6 sm:p-8 border border-slate-800 hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between xl:col-span-2">
+            <div className="space-y-5">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">EdTech & Django</span>
+                <span className="text-xs text-emerald-400 flex items-center gap-1"><Globe className="w-3 h-3" /> Démo Vercel</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white font-outfit flex items-center gap-3"><BookOpen className="w-6 h-6 text-emerald-400" />{eduConnect.title}</h3>
+              <p className="text-sm text-slate-300 leading-relaxed">{eduConnect.description}</p>
+              <div className="flex flex-wrap gap-1.5">
+                {eduConnect.technologies.map((tech) => (
+                  <span key={tech} className="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800">{tech}</span>
+                ))}
+              </div>
+            </div>
+            <div className="pt-6 mt-6 border-t border-slate-800/80 flex flex-wrap items-center gap-3">
+              <a href={eduConnect.demoUrl} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-xl font-bold text-xs text-white bg-emerald-600 hover:bg-emerald-500 transition-colors flex items-center gap-2">
+                Tester EduConnect <ExternalLink className="w-4 h-4" />
+              </a>
+              <a href={eduConnect.githubUrl} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-xl font-semibold text-xs text-slate-200 bg-slate-900 hover:bg-slate-800 border border-slate-700 flex items-center gap-2">
+                Code source GitHub <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
           
           {/* Card 1: BMP.tn */}
           <div className="glass-card rounded-3xl p-6 sm:p-8 border border-slate-800 hover:border-sky-500/40 transition-all duration-300 group flex flex-col justify-between relative overflow-hidden shadow-2xl">
