@@ -135,6 +135,10 @@ export const ContactSection: React.FC = () => {
                   </div>
                 </div>
 
+                <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800/90 hover:border-sky-500/40 transition-colors block">
+                  <div className="text-[11px] font-mono text-slate-400">LinkedIn</div>
+                  <div className="text-xs sm:text-sm font-semibold text-sky-300 break-all">linkedin.com/in/salim-hizi-2bb706254</div>
+                </a>
                 {/* GitHub Box */}
                 <a
                   href={PERSONAL_INFO.github}

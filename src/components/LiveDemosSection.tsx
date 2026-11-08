@@ -30,27 +30,45 @@ export const LiveDemosSection: React.FC = () => {
         </div>
 
         {/* Featured Live Cards Grid */}
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
-          <div className="glass-card rounded-3xl p-6 sm:p-8 border border-slate-800 hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between xl:col-span-2">
-            <div className="space-y-5">
-              <div className="flex items-center gap-2 flex-wrap">
-                <span className="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">EdTech & Django</span>
-                <span className="text-xs text-emerald-400 flex items-center gap-1"><Globe className="w-3 h-3" /> Démo Vercel</span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="glass-card rounded-3xl p-6 sm:p-8 border border-slate-800 hover:border-emerald-500/40 transition-all duration-300 group flex flex-col justify-between relative overflow-hidden shadow-2xl">
+            <div className="space-y-6">
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">EdTech & Django</span>
+                    <span className="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1"><Globe className="w-3 h-3" /> Live Vercel</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white group-hover:text-emerald-300 transition-colors font-outfit pt-1">{eduConnect.title}</h3>
+                </div>
+                <div className="w-12 h-12 flex-shrink-0 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 p-0.5 shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
+                  <div className="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-emerald-400"><BookOpen className="w-6 h-6" /></div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-white font-outfit flex items-center gap-3"><BookOpen className="w-6 h-6 text-emerald-400" />{eduConnect.title}</h3>
               <p className="text-sm text-slate-300 leading-relaxed">{eduConnect.description}</p>
+              <div className="grid grid-cols-2 gap-3 text-xs text-slate-300">
+                {[
+                  { label: 'Cours & Exercices', icon: BookOpen, color: 'text-cyan-400' },
+                  { label: 'Objectifs & Progression', icon: Zap, color: 'text-amber-400' },
+                  { label: 'Validation des Travaux', icon: MessageSquare, color: 'text-purple-400' },
+                  { label: 'Analyse IA Gemini', icon: Sparkles, color: 'text-emerald-400' },
+                ].map(({ label, icon: Icon, color }) => (
+                  <div key={label} className="p-3 rounded-xl bg-slate-900/90 border border-slate-800/80 flex items-center gap-2.5"><Icon className={`w-4 h-4 flex-shrink-0 ${color}`} /><span>{label}</span></div>
+                ))}
+              </div>
+              <div className="space-y-2">
+                <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Technologies Utilisées</div>
               <div className="flex flex-wrap gap-1.5">
                 {eduConnect.technologies.map((tech) => (
                   <span key={tech} className="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800">{tech}</span>
                 ))}
               </div>
+              </div>
             </div>
-            <div className="pt-6 mt-6 border-t border-slate-800/80 flex flex-wrap items-center gap-3">
-              <a href={eduConnect.demoUrl} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-xl font-bold text-xs text-white bg-emerald-600 hover:bg-emerald-500 transition-colors flex items-center gap-2">
+            <div className="pt-6 mt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
+              <a href={eduConnect.githubUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-400 font-mono hover:text-emerald-300 transition-colors flex items-center gap-2">Code source GitHub <ExternalLink className="w-4 h-4" /></a>
+              <a href={eduConnect.demoUrl} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 shadow-md shadow-emerald-500/20 transition-all flex items-center gap-2 group-hover:scale-105">
                 Tester EduConnect <ExternalLink className="w-4 h-4" />
-              </a>
-              <a href={eduConnect.githubUrl} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-xl font-semibold text-xs text-slate-200 bg-slate-900 hover:bg-slate-800 border border-slate-700 flex items-center gap-2">
-                Code source GitHub <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>

@@ -30,7 +30,8 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Links & Back to Top */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 flex-wrap">
+          <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-400 hover:text-sky-300 transition-colors">LinkedIn</a>
           <a
             href={PERSONAL_INFO.github}
             target="_blank"

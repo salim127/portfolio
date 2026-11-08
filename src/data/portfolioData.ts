@@ -58,7 +58,7 @@ export const PERSONAL_INFO = {
   phone: "+216 56 269 609",
   location: "Ariana, Tunis, Tunisie",
   github: "https://github.com/salim127",
-  linkedin: "https://linkedin.com/in/salim-hizi", // profile fallback link
+  linkedin: "https://www.linkedin.com/in/salim-hizi-2bb706254/",
   cvPath: "/Salim_HIZI_CV.pdf",
 };
 

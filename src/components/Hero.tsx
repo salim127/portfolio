@@ -55,7 +55,7 @@ export const Hero: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-xs font-bold text-white uppercase tracking-wider">Applications en Production Live</h4>
-                  <p className="text-xs text-slate-400">BMP.tn (Marketplace BTP & IA) & AI English Tutor</p>
+                  <p className="text-xs text-slate-400">EduConnect, BMP.tn & AI English Tutor</p>
                 </div>
               </div>
 
@@ -96,6 +96,7 @@ export const Hero: React.FC = () => {
               >
                 <GithubIcon className="w-5 h-5 text-sky-400" />
               </a>
+              <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="px-4 py-3.5 rounded-xl text-sm font-semibold text-sky-400 bg-slate-900 border border-slate-800 hover:text-white hover:border-sky-500/40 transition-colors">LinkedIn</a>
             </div>
 
             {/* Key Quick Metrics */}
