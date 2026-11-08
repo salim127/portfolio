@@ -68,7 +68,7 @@ export const LiveDemosSection: React.FC = () => {
             <div className="pt-6 mt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
               <a href={eduConnect.githubUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-400 font-mono hover:text-emerald-300 transition-colors flex items-center gap-2">Code source GitHub <ExternalLink className="w-4 h-4" /></a>
               <a href={eduConnect.demoUrl} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 shadow-md shadow-emerald-500/20 transition-all flex items-center gap-2 group-hover:scale-105">
-                Tester EduConnect <ExternalLink className="w-4 h-4" />
+                <span>Tester l’application</span> <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -149,7 +149,7 @@ export const LiveDemosSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="px-5 py-2.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-md shadow-sky-500/20 transition-all flex items-center gap-2 group-hover:scale-105"
               >
-                <span>Accéder au Site BMP.tn</span>
+                <span>Tester l’application</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
             </div>
@@ -232,7 +232,7 @@ export const LiveDemosSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="px-5 py-2.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 shadow-md shadow-purple-500/20 transition-all flex items-center gap-2 group-hover:scale-105"
               >
-                <span>Tester l'Application AI Tutor</span>
+                <span>Tester l’application</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
             </div>
